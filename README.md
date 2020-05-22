@@ -20,3 +20,10 @@ To run this application, run 'npm start' in the root directory of the project.
 
 ## Init the wallet
 curl -H "Content-Type: application/json" -X POST http://localhost:4001/wallet/init
+
+# Example HTTP GET requests
+
+## For getBalance()
+This is an ugly looking GET request, but it does allow the browser to execute it with an array count of 2.
+
+http://localhost:4001/wallet/balance/f3a1e69b6176052fcc4a3248f1c5a91dea308ca9?unspentTxOuts[]={'txOutId': "1", 'txOutIndex': 1, 'address': "someadress", 'amount': 10}&unspentTxOuts[]={'txOutId': "1", 'txOutIndex': 1, 'address': "someadress", 'amount': 10}

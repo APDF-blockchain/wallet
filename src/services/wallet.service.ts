@@ -23,7 +23,7 @@ export class WalletService {
     return buffer.toString();
   }
 
-  public getPublicFromWallet(): string  {
+  public getPublicFromWallet(): string {
     const privateKey = this.getPrivateFromWallet();
     const key = this.EC.keyFromPrivate(privateKey, 'hex');
     return key.getPublic().encode('hex', false); // TODO: determine if false is the correct second argument.
@@ -47,13 +47,20 @@ export class WalletService {
   }
 
   public getBalance(address: string, unspentTxOuts: UnspentTxOut[]): number {
-    return _(unspentTxOuts)
-      .filter((uTxO: UnspentTxOut) => uTxO.address === address)
-      .map((uTxO: UnspentTxOut) => uTxO.amount)
-      .sum();
+    // return _(unspentTxOuts)
+    //   .filter((uTxO: UnspentTxOut) => uTxO.address === address)
+    //   .map((uTxO: UnspentTxOut) => uTxO.amount)
+    //   .sum();
+    let rVal: number = 0;
+    for (let i = 0; i < unspentTxOuts.length; i++) {
+      if(unspentTxOuts[i].address === address) {
+        rVal += unspentTxOuts[i].amount;
+      }
+    }
+    return rVal;
   }
 
-  public findTxOutsForAmount(amount: number, myUnspentTxOuts: UnspentTxOut[]): {'includedUnspentTxOuts': any[], 'leftOverAmount': number} {
+  public findTxOutsForAmount(amount: number, myUnspentTxOuts: UnspentTxOut[]): { 'includedUnspentTxOuts': any[], 'leftOverAmount': number } {
     let currentAmount = 0;
     const includedUnspentTxOuts = [];
     for (const myUnspentTxOut of myUnspentTxOuts) {
@@ -67,7 +74,7 @@ export class WalletService {
     throw Error('not enough coins to send transaction');
   }
 
-  public createTxOuts(receiverAddress: string, myAddress: string, amount: number, leftOverAmount: number): any[]  {
+  public createTxOuts(receiverAddress: string, myAddress: string, amount: number, leftOverAmount: number): any[] {
     const txOut1: TxOut = new TxOut(receiverAddress, amount);
     if (leftOverAmount === 0) {
       return [txOut1];
@@ -78,9 +85,9 @@ export class WalletService {
   }
 
   public createTransaction(
-    receiverAddress: string, 
+    receiverAddress: string,
     amount: number,
-    privateKey: string, 
+    privateKey: string,
     unspentTxOuts: UnspentTxOut[]): Transaction {
 
     const myAddress: string = this.transactionService.getPublicKey(privateKey);

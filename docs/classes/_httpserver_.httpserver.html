@@ -105,6 +105,8 @@
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_httpserver_.httpserver.html#listenerurl" class="tsd-kind-icon">listener<wbr>Url</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_httpserver_.httpserver.html#myhttpport" class="tsd-kind-icon">my<wbr>Http<wbr>Port</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_httpserver_.httpserver.html#nodeid" class="tsd-kind-icon">node<wbr>Id</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_httpserver_.httpserver.html#transactionservice" class="tsd-kind-icon">transaction<wbr>Service</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_httpserver_.httpserver.html#walletservice" class="tsd-kind-icon">wallet<wbr>Service</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
@@ -123,13 +125,13 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Http<wbr>Server<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_httpserver_.httpserver.html" class="tsd-signature-type">HttpServer</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Http<wbr>Server<span class="tsd-signature-symbol">(</span>walletService<span class="tsd-signature-symbol">: </span><a href="_services_wallet_service_.walletservice.html" class="tsd-signature-type">WalletService</a>, transactionService<span class="tsd-signature-symbol">: </span><a href="_services_transaction_service_.transactionservice.html" class="tsd-signature-type">TransactionService</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_httpserver_.httpserver.html" class="tsd-signature-type">HttpServer</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/APDF-blockchain/wallet/blob/117cbd2/src/httpserver.ts#L25">httpserver.ts:25</a></li>
+									<li>Defined in <a href="https://github.com/APDF-blockchain/wallet/blob/4540afb/src/httpserver.ts#L27">httpserver.ts:27</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -141,6 +143,19 @@
 									</dd>
 								</dl>
 							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>walletService: <a href="_services_wallet_service_.walletservice.html" class="tsd-signature-type">WalletService</a></h5>
+								</li>
+								<li>
+									<h5>transactionService: <a href="_services_transaction_service_.transactionservice.html" class="tsd-signature-type">TransactionService</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+										</div>
+									</div>
+								</li>
+							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="_httpserver_.httpserver.html" class="tsd-signature-type">HttpServer</a></h4>
 						</li>
 					</ul>
@@ -151,10 +166,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
 					<a name="about" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagPrivate">Private</span> about</h3>
-					<div class="tsd-signature tsd-kind-icon">about<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;Blockchain Project&quot;</span></div>
+					<div class="tsd-signature tsd-kind-icon">about<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;Wallet for Blockchain Project&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/APDF-blockchain/wallet/blob/117cbd2/src/httpserver.ts#L17">httpserver.ts:17</a></li>
+							<li>Defined in <a href="https://github.com/APDF-blockchain/wallet/blob/4540afb/src/httpserver.ts#L19">httpserver.ts:19</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -173,7 +188,7 @@
 					<div class="tsd-signature tsd-kind-icon">listener<wbr>Url<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/APDF-blockchain/wallet/blob/117cbd2/src/httpserver.ts#L13">httpserver.ts:13</a></li>
+							<li>Defined in <a href="https://github.com/APDF-blockchain/wallet/blob/4540afb/src/httpserver.ts#L15">httpserver.ts:15</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -192,7 +207,7 @@
 					<div class="tsd-signature tsd-kind-icon">my<wbr>Http<wbr>Port<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/APDF-blockchain/wallet/blob/117cbd2/src/httpserver.ts#L25">httpserver.ts:25</a></li>
+							<li>Defined in <a href="https://github.com/APDF-blockchain/wallet/blob/4540afb/src/httpserver.ts#L27">httpserver.ts:27</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -211,7 +226,7 @@
 					<div class="tsd-signature tsd-kind-icon">node<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/APDF-blockchain/wallet/blob/117cbd2/src/httpserver.ts#L21">httpserver.ts:21</a></li>
+							<li>Defined in <a href="https://github.com/APDF-blockchain/wallet/blob/4540afb/src/httpserver.ts#L23">httpserver.ts:23</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -223,6 +238,30 @@
 							</dd>
 						</dl>
 					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="transactionservice" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> transaction<wbr>Service</h3>
+					<div class="tsd-signature tsd-kind-icon">transaction<wbr>Service<span class="tsd-signature-symbol">:</span> <a href="_services_transaction_service_.transactionservice.html" class="tsd-signature-type">TransactionService</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/APDF-blockchain/wallet/blob/4540afb/src/httpserver.ts#L35">httpserver.ts:35</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="walletservice" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> wallet<wbr>Service</h3>
+					<div class="tsd-signature tsd-kind-icon">wallet<wbr>Service<span class="tsd-signature-symbol">:</span> <a href="_services_wallet_service_.walletservice.html" class="tsd-signature-type">WalletService</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/APDF-blockchain/wallet/blob/4540afb/src/httpserver.ts#L35">httpserver.ts:35</a></li>
+						</ul>
+					</aside>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
@@ -237,7 +276,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/APDF-blockchain/wallet/blob/117cbd2/src/httpserver.ts#L37">httpserver.ts:37</a></li>
+									<li>Defined in <a href="https://github.com/APDF-blockchain/wallet/blob/4540afb/src/httpserver.ts#L41">httpserver.ts:41</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -263,7 +302,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/APDF-blockchain/wallet/blob/117cbd2/src/httpserver.ts#L45">httpserver.ts:45</a></li>
+									<li>Defined in <a href="https://github.com/APDF-blockchain/wallet/blob/4540afb/src/httpserver.ts#L49">httpserver.ts:49</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -346,6 +385,12 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
 								<a href="_httpserver_.httpserver.html#nodeid" class="tsd-kind-icon">node<wbr>Id</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+								<a href="_httpserver_.httpserver.html#transactionservice" class="tsd-kind-icon">transaction<wbr>Service</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+								<a href="_httpserver_.httpserver.html#walletservice" class="tsd-kind-icon">wallet<wbr>Service</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_httpserver_.httpserver.html#getlistenerurl" class="tsd-kind-icon">get<wbr>Listener<wbr>Url</a>
