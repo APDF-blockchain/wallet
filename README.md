@@ -21,6 +21,9 @@ To run this application, run 'npm start' in the root directory of the project.
 ## Init the wallet
 curl -H "Content-Type: application/json" -X POST http://localhost:4001/wallet/init
 
+## Create a txOut
+curl -H "Content-Type: application/json" -X POST http://localhost:4001/wallet/create-tx-out/12345/54321/10/5
+
 # Example HTTP GET requests
 
 ## For getBalance()

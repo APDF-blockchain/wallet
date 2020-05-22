@@ -125,9 +125,24 @@ export class HttpServer {
             //     res.status(401).send("No transactions were received.");
         });
 
-
-        app.post('/peers/notify-new-block', (req, res) => {
-            console.log(this.myHttpPort + ':POST /peers/notify-new-block');
+        /**
+         * @description - create a tx-out
+         * @returns {any[]} txOut array of ether [txOut1] or [txOut1, leftOverTx]
+         */
+        //  public createTxOuts(receiverAddress: string, myAddress: string, amount: number, leftOverAmount: number): any[] {
+        app.post('/wallet/create-tx-out/:receiverAddress/:myAddress/:amount/:leftOverAmount', (req, res) => {
+            console.log(this.myHttpPort + ':POST /wallet/create-tx-out/:' + req.params.receiverAddress + '/:' + req.params.myAddress + '/:' + req.params.amount + '/:' + req.params.leftOverAmount);
+            let rVal: any[] = this.walletService.createTxOuts(
+                req.params.receiverAddress,
+                req.params.myAddress,
+                req.params.amount,
+                req.params.leftOverAmount
+            );
+            if (rVal === null) {
+                res.status(401).send("Request failed.");
+            } else {
+                res.send(rVal);
+            }
         });
 
         app.post('/stop', (req, res) => {
