@@ -96,6 +96,20 @@ export class HttpServer {
             res.send(rVal);
         });
 
+        /**
+         * @description - retrieve the public key from the wallet
+         * @return {string} publickey
+         */
+        app.get('/wallet/publickey', (req, res) => {
+            console.log(this.myHttpPort + ':GET /wallet/publickey');
+            let rVal: string = this.walletService.getPublicKeyFromWallet();
+            res.send(rVal);
+        });
+
+        /**
+         * @description - get the balance for the given address
+         * @returns {string} balance
+         */
         app.get('/wallet/balance/:address', (req, res) => {
             console.log(this.myHttpPort + ':GET /wallet/balance/:' + req.params.address);
             // https://website.com/example?myarray[]=136129&myarray[]=137794&myarray[]=137792

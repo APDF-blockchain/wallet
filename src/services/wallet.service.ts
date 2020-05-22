@@ -23,7 +23,7 @@ export class WalletService {
     return buffer.toString();
   }
 
-  public getPublicFromWallet(): string {
+  public getPublicKeyFromWallet(): string {
     const privateKey = this.getPrivateFromWallet();
     const key = this.EC.keyFromPrivate(privateKey, 'hex');
     return key.getPublic().encode('hex', false); // TODO: determine if false is the correct second argument.
