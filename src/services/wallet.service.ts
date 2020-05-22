@@ -18,7 +18,7 @@ export class WalletService {
 
   public EC = new ec('secp256k1');
   private privateKeyLocation = 'node/wallet/private_key';
-  private privateKeyDirectory = 'node/wallet/';
+  private walletDirectory = 'node/wallet/';
 
   /**
    * @constructor
@@ -40,7 +40,7 @@ export class WalletService {
     const filename = "UTC_JSON_WALLET_" + Math.round(+ new Date() / 1000) + "_" + +(Math.floor(Math.random() * 200001) - 10000) + ".json";
 
     wallet.encrypt(password).then((jsonWallet) => {
-      writeFileSync(this.privateKeyDirectory + filename, jsonWallet, 'utf-8');
+      writeFileSync(this.walletDirectory + filename, jsonWallet, 'utf-8');
     });
     let rVal = {'mnemonic': mnemonic, 'filename': filename};
     return rVal;
@@ -60,6 +60,7 @@ export class WalletService {
   public generatePrivateKey(): string {
     const keyPair = this.EC.genKeyPair();
     const privateKey = keyPair.getPrivate();
+    const publicKey = keyPair.getPublicKey();
     return privateKey.toString(16);
   }
 
