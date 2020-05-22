@@ -8,7 +8,6 @@ import { ethers } from 'ethers';
  */
 export class WalletService {
 
-  public EC = new ec('secp256k1');
   private walletDirectory = 'node/wallet/';
 
   /**
