@@ -4,7 +4,9 @@
   "description": "Performs local creation and storage of the wallet for the block chain.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "start": "npm run build && node dist/wallet.js"
   },
   "repository": {
     "type": "git",
