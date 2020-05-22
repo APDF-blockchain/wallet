@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Wallet | wallet</title>
+	<title>TxOut | wallet</title>
 	<meta name="description" content="Documentation for wallet">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,13 +56,13 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="../modules/_wallet_.html">&quot;wallet&quot;</a>
+					<a href="../modules/_model_tx_out_.html">&quot;model/tx-out&quot;</a>
 				</li>
 				<li>
-					<a href="_wallet_.wallet.html">Wallet</a>
+					<a href="_model_tx_out_.txout.html">TxOut</a>
 				</li>
 			</ul>
-			<h1>Class Wallet</h1>
+			<h1>Class TxOut</h1>
 		</div>
 	</div>
 </header>
@@ -74,7 +74,7 @@
 					<dl class="tsd-comment-tags">
 						<dt>classdesc</dt>
 						<dd><ul>
-								<li>This is the main of the wallet server</li>
+								<li>This class somthing, something, something</li>
 							</ul>
 						</dd>
 					</dl>
@@ -84,7 +84,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">Wallet</span>
+						<span class="target">TxOut</span>
 					</li>
 				</ul>
 			</section>
@@ -95,17 +95,14 @@
 						<section class="tsd-index-section ">
 							<h3>Constructors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="_wallet_.wallet.html#constructor" class="tsd-kind-icon">constructor</a></li>
+								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="_model_tx_out_.txout.html#constructor" class="tsd-kind-icon">constructor</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_wallet_.wallet.html#config" class="tsd-kind-icon">config</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_wallet_.wallet.html#httpport" class="tsd-kind-icon">http<wbr>Port</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_wallet_.wallet.html#httpserver" class="tsd-kind-icon">http<wbr>Server</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_wallet_.wallet.html#transactionservice" class="tsd-kind-icon">transaction<wbr>Service</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_wallet_.wallet.html#walletservice" class="tsd-kind-icon">wallet<wbr>Service</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_model_tx_out_.txout.html#address" class="tsd-kind-icon">address</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_model_tx_out_.txout.html#amount" class="tsd-kind-icon">amount</a></li>
 							</ul>
 						</section>
 					</div>
@@ -117,25 +114,44 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Wallet<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_wallet_.wallet.html" class="tsd-signature-type">Wallet</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>TxOut<span class="tsd-signature-symbol">(</span>address<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, amount<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_model_tx_out_.txout.html" class="tsd-signature-type">TxOut</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/APDF-blockchain/wallet/blob/117cbd2/src/wallet.ts#L30">wallet.ts:30</a></li>
+									<li>Defined in <a href="https://github.com/APDF-blockchain/wallet/blob/117cbd2/src/model/tx-out.ts#L13">model/tx-out.ts:13</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<dl class="tsd-comment-tags">
 									<dt>description</dt>
 									<dd><ul>
-											<li>The constructor for this main class</li>
+											<li>constructor to create this object</li>
 										</ul>
 									</dd>
 								</dl>
 							</div>
-							<h4 class="tsd-returns-title">Returns <a href="_wallet_.wallet.html" class="tsd-signature-type">Wallet</a></h4>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>address: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>address of something</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<h5>amount: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>amount of something</p>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="_model_tx_out_.txout.html" class="tsd-signature-type">TxOut</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -143,95 +159,38 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="config" class="tsd-anchor"></a>
-					<h3>config</h3>
-					<div class="tsd-signature tsd-kind-icon">config<span class="tsd-signature-symbol">:</span> <a href="_config_.config.html" class="tsd-signature-type">Config</a><span class="tsd-signature-symbol"> = new Config()</span></div>
+					<a name="address" class="tsd-anchor"></a>
+					<h3>address</h3>
+					<div class="tsd-signature tsd-kind-icon">address<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/APDF-blockchain/wallet/blob/117cbd2/src/wallet.ts#L18">wallet.ts:18</a></li>
+							<li>Defined in <a href="https://github.com/APDF-blockchain/wallet/blob/117cbd2/src/model/tx-out.ts#L9">model/tx-out.ts:9</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<dl class="tsd-comment-tags">
 							<dt>description</dt>
 							<dd><ul>
-									<li>The configuration object for this server</li>
+									<li>address of something.</li>
 								</ul>
 							</dd>
 						</dl>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="httpport" class="tsd-anchor"></a>
-					<h3>http<wbr>Port</h3>
-					<div class="tsd-signature tsd-kind-icon">http<wbr>Port<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = parseInt(process.env.HTTP_PORT) || this.config.defaultServerPort</span></div>
+					<a name="amount" class="tsd-anchor"></a>
+					<h3>amount</h3>
+					<div class="tsd-signature tsd-kind-icon">amount<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/APDF-blockchain/wallet/blob/117cbd2/src/wallet.ts#L22">wallet.ts:22</a></li>
+							<li>Defined in <a href="https://github.com/APDF-blockchain/wallet/blob/117cbd2/src/model/tx-out.ts#L13">model/tx-out.ts:13</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<dl class="tsd-comment-tags">
 							<dt>description</dt>
 							<dd><ul>
-									<li>The port number for this server listener</li>
-								</ul>
-							</dd>
-						</dl>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="httpserver" class="tsd-anchor"></a>
-					<h3>http<wbr>Server</h3>
-					<div class="tsd-signature tsd-kind-icon">http<wbr>Server<span class="tsd-signature-symbol">:</span> <a href="_httpserver_.httpserver.html" class="tsd-signature-type">HttpServer</a></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/APDF-blockchain/wallet/blob/117cbd2/src/wallet.ts#L14">wallet.ts:14</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<dl class="tsd-comment-tags">
-							<dt>description</dt>
-							<dd><ul>
-									<li>The http service object</li>
-								</ul>
-							</dd>
-						</dl>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="transactionservice" class="tsd-anchor"></a>
-					<h3>transaction<wbr>Service</h3>
-					<div class="tsd-signature tsd-kind-icon">transaction<wbr>Service<span class="tsd-signature-symbol">:</span> <a href="_services_transaction_service_.transactionservice.html" class="tsd-signature-type">TransactionService</a></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/APDF-blockchain/wallet/blob/117cbd2/src/wallet.ts#L26">wallet.ts:26</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<dl class="tsd-comment-tags">
-							<dt>description</dt>
-							<dd><ul>
-									<li>The transaction service</li>
-								</ul>
-							</dd>
-						</dl>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="walletservice" class="tsd-anchor"></a>
-					<h3>wallet<wbr>Service</h3>
-					<div class="tsd-signature tsd-kind-icon">wallet<wbr>Service<span class="tsd-signature-symbol">:</span> <a href="_services_wallet_service_.walletservice.html" class="tsd-signature-type">WalletService</a></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/APDF-blockchain/wallet/blob/117cbd2/src/wallet.ts#L30">wallet.ts:30</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<dl class="tsd-comment-tags">
-							<dt>description</dt>
-							<dd><ul>
-									<li>The wallet service</li>
+									<li>amount of something.</li>
 								</ul>
 							</dd>
 						</dl>
@@ -257,7 +216,7 @@
 					<li class=" tsd-kind-module">
 						<a href="../modules/_model_tx_in_.html">&quot;model/tx-<wbr>in&quot;</a>
 					</li>
-					<li class=" tsd-kind-module">
+					<li class="current tsd-kind-module">
 						<a href="../modules/_model_tx_out_.html">&quot;model/tx-<wbr>out&quot;</a>
 					</li>
 					<li class=" tsd-kind-module">
@@ -269,7 +228,7 @@
 					<li class=" tsd-kind-module">
 						<a href="../modules/_services_wallet_service_.html">&quot;services/wallet.service&quot;</a>
 					</li>
-					<li class="current tsd-kind-module">
+					<li class=" tsd-kind-module">
 						<a href="../modules/_wallet_.html">&quot;wallet&quot;</a>
 					</li>
 				</ul>
@@ -279,33 +238,21 @@
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-class tsd-parent-kind-module">
-						<a href="_wallet_.wallet.html" class="tsd-kind-icon">Wallet</a>
+						<a href="_model_tx_out_.txout.html" class="tsd-kind-icon">Tx<wbr>Out</a>
 						<ul>
 							<li class=" tsd-kind-constructor tsd-parent-kind-class">
-								<a href="_wallet_.wallet.html#constructor" class="tsd-kind-icon">constructor</a>
+								<a href="_model_tx_out_.txout.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="_wallet_.wallet.html#config" class="tsd-kind-icon">config</a>
+								<a href="_model_tx_out_.txout.html#address" class="tsd-kind-icon">address</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="_wallet_.wallet.html#httpport" class="tsd-kind-icon">http<wbr>Port</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="_wallet_.wallet.html#httpserver" class="tsd-kind-icon">http<wbr>Server</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="_wallet_.wallet.html#transactionservice" class="tsd-kind-icon">transaction<wbr>Service</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="_wallet_.wallet.html#walletservice" class="tsd-kind-icon">wallet<wbr>Service</a>
+								<a href="_model_tx_out_.txout.html#amount" class="tsd-kind-icon">amount</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-variable tsd-parent-kind-module tsd-is-not-exported">
-						<a href="../modules/_wallet_.html#run" class="tsd-kind-icon">run</a>
-					</li>
 				</ul>
 			</nav>
 		</div>

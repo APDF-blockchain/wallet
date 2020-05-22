@@ -26,7 +26,7 @@ export class Config {
     public faucetAddress: string;
 
     /**
-     * @description - Class constructor initializes the configuration attributes for the entire Node/blockchain.
+     * @description - Class constructor initializes the configuration attributes for the wallet server
      * @constructor
      */
     constructor() {

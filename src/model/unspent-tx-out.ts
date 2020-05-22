@@ -1,3 +1,7 @@
+/**
+ * @classdesc - This class holds the unspent balances
+ * @class UnspentTxOut
+ */
 export class UnspentTxOut {
   public readonly txOutId: string;
   public readonly txOutIndex: number;
