@@ -18,13 +18,13 @@ export class WalletService {
     console.log('WalletService created.');
   }
 
-  public getPrivateFromWallet(): string {
+  private getPrivateKeyFromWallet(): string {
     const buffer = readFileSync(this.privateKeyLocation, 'utf8');
     return buffer.toString();
   }
 
   public getPublicKeyFromWallet(): string {
-    const privateKey = this.getPrivateFromWallet();
+    const privateKey = this.getPrivateKeyFromWallet();
     const key = this.EC.keyFromPrivate(privateKey, 'hex');
     return key.getPublic().encode('hex', false); // TODO: determine if false is the correct second argument.
   }
