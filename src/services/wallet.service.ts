@@ -1,7 +1,7 @@
 import { ec } from 'elliptic';
 //const fs = require('fs');
 import { existsSync, readFileSync, unlinkSync, writeFileSync } from 'fs';
-import * as _ from 'lodash';
+//import * as _ from 'lodash';
 
 import { TransactionService } from './transaction.service';
 import { UnspentTxOut } from '../model/unspent-tx-out';
