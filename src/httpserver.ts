@@ -159,6 +159,21 @@ export class HttpServer {
             }
         });
 
+        app.post('/wallet/create-tx', (req, res) => {
+            // console.log(this.myHttpPort + ':POST /wallet/create-tx-out/:' + req.params.receiverAddress + '/:' + req.params.myAddress + '/:' + req.params.amount + '/:' + req.params.leftOverAmount);
+            // let rVal: any[] = this.walletService.createTxOuts(
+            //     req.params.receiverAddress,
+            //     req.params.myAddress,
+            //     req.params.amount,
+            //     req.params.leftOverAmount
+            // );
+            // if (rVal === null) {
+            //     res.status(401).send("Request failed.");
+            // } else {
+            //     res.send(rVal);
+            // }
+        });
+
         app.post('/stop', (req, res) => {
             res.send({ 'msg': 'stopping server' });
             process.exit();
