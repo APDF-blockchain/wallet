@@ -8,6 +8,9 @@ import { ethers } from 'ethers';
  */
 export class WalletService {
 
+  /**
+   * @description - the wallet directory
+   */
   private walletDirectory = 'node/wallet/';
 
   /**

@@ -67,7 +67,8 @@
 				<a href="#wallet" id="wallet" style="color: inherit; text-decoration: none;">
 					<h1>wallet</h1>
 				</a>
-				<p>This is a wallet server, similar to the node and the miner.</p>
+				<p>This is a wallet server, similar to the node and the miner.  The only thing this server does
+				is to create wallets.</p>
 				<a href="#run-the-application" id="run-the-application" style="color: inherit; text-decoration: none;">
 					<h1>Run the application</h1>
 				</a>
@@ -93,19 +94,15 @@
 				<a href="#some-useful-curl-commands" id="some-useful-curl-commands" style="color: inherit; text-decoration: none;">
 					<h1>Some useful curl commands</h1>
 				</a>
-				<a href="#init-the-wallet" id="init-the-wallet" style="color: inherit; text-decoration: none;">
-					<h2>Init the wallet</h2>
+				<a href="#create-a-wallet" id="create-a-wallet" style="color: inherit; text-decoration: none;">
+					<h2>Create a wallet</h2>
 				</a>
-				<p>curl -H &quot;Content-Type: application/json&quot; -X POST <a href="http://localhost:4001/wallet/init">http://localhost:4001/wallet/init</a></p>
-				<a href="#create-a-txout" id="create-a-txout" style="color: inherit; text-decoration: none;">
-					<h2>Create a txOut</h2>
-				</a>
-				<p>curl -H &quot;Content-Type: application/json&quot; -X POST <a href="http://localhost:4001/wallet/create-tx-out/12345/54321/10/5">http://localhost:4001/wallet/create-tx-out/12345/54321/10/5</a></p>
+				<p>curl -H &quot;Content-Type: application/json&quot; -X POST <a href="http://localhost:4001/wallet/create/1234">http://localhost:4001/wallet/create/1234</a></p>
 				<a href="#example-http-get-requests" id="example-http-get-requests" style="color: inherit; text-decoration: none;">
 					<h1>Example HTTP GET requests</h1>
 				</a>
-				<a href="#for-getbalance" id="for-getbalance" style="color: inherit; text-decoration: none;">
-					<h2>For getBalance()</h2>
+				<a href="#for-getbalance-note-this-is-no-longer-used-but-keeping-for-posterity" id="for-getbalance-note-this-is-no-longer-used-but-keeping-for-posterity" style="color: inherit; text-decoration: none;">
+					<h2>For getBalance() Note: this is no longer used, but keeping for posterity</h2>
 				</a>
 				<p>This is an ugly looking GET request, but it does allow the browser to execute it with an array count of 2.</p>
 				<p><a href="http://localhost:4001/wallet/balance/f3a1e69b6176052fcc4a3248f1c5a91dea308ca9?unspentTxOuts%5B%5D=%7B&#39;txOutId&#39;">http://localhost:4001/wallet/balance/f3a1e69b6176052fcc4a3248f1c5a91dea308ca9?unspentTxOuts[]={&#39;txOutId&#39;</a>: &quot;1&quot;, &#39;txOutIndex&#39;: 1, &#39;address&#39;: &quot;someadress&quot;, &#39;amount&#39;: 10}&amp;unspentTxOuts[]={&#39;txOutId&#39;: &quot;1&quot;, &#39;txOutIndex&#39;: 1, &#39;address&#39;: &quot;someadress&quot;, &#39;amount&#39;: 10}</p>
