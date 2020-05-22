@@ -1,6 +1,5 @@
 import { HttpServer } from "./httpserver";
 import { Config } from "./config";
-import { TransactionService } from "./services/transaction.service";
 import { WalletService } from "./services/wallet.service";
 
 /**
@@ -21,10 +20,6 @@ export class Wallet {
      */
     public httpPort: number = parseInt(process.env.HTTP_PORT) || this.config.defaultServerPort;
     /**
-     * @description - The transaction service
-     */
-    public transactionService: TransactionService;
-    /**
      * @description - The wallet service 
      */
     public walletService: WalletService;
@@ -34,9 +29,8 @@ export class Wallet {
      * @constructor
      */
     constructor() {
-        this.transactionService = new TransactionService();
-        this.walletService = new WalletService(this.transactionService);
-        this.httpServer = new HttpServer(this.walletService, this.transactionService);
+        this.walletService = new WalletService();
+        this.httpServer = new HttpServer(this.walletService);
         this.httpServer.initHttpServer(this.httpPort);
     }
 }
