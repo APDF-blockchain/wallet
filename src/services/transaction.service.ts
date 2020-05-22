@@ -12,7 +12,9 @@ export class TransactionService {
 
   public COINBASE_AMOUNT: number = 50;
 
-  constructor() { }
+  constructor() { 
+    console.log('TransactionService created.');
+  }
 
   public getTransactionId(transaction: Transaction): string {
     const txInContent: string = transaction.txIns

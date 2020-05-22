@@ -15,7 +15,7 @@ export class WalletService {
   private privateKeyLocation = 'node/wallet/private_key';
 
   constructor(private transactionService: TransactionService) {
-    console.log('Hello');
+    console.log('WalletService created.');
   }
 
   public getPrivateFromWallet(): string {
