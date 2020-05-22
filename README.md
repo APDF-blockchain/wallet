@@ -1,5 +1,6 @@
 # wallet
-This is a wallet server, similar to the node and the miner.
+This is a wallet server, similar to the node and the miner.  The only thing this server does
+is to create wallets.
 
 # Run the application
 To run this application, run 'npm start' in the root directory of the project.
@@ -18,15 +19,12 @@ To run this application, run 'npm start' in the root directory of the project.
 
 # Some useful curl commands
 
-## Init the wallet
-curl -H "Content-Type: application/json" -X POST http://localhost:4001/wallet/init
-
-## Create a txOut
-curl -H "Content-Type: application/json" -X POST http://localhost:4001/wallet/create-tx-out/12345/54321/10/5
+## Create a wallet
+curl -H "Content-Type: application/json" -X POST http://localhost:4001/wallet/create/1234
 
 # Example HTTP GET requests
 
-## For getBalance()
+## For getBalance() Note: this is no longer used, but keeping for posterity 
 This is an ugly looking GET request, but it does allow the browser to execute it with an array count of 2.
 
 http://localhost:4001/wallet/balance/f3a1e69b6176052fcc4a3248f1c5a91dea308ca9?unspentTxOuts[]={'txOutId': "1", 'txOutIndex': 1, 'address': "someadress", 'amount': 10}&unspentTxOuts[]={'txOutId': "1", 'txOutIndex': 1, 'address': "someadress", 'amount': 10}
