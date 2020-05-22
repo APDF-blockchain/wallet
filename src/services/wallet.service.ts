@@ -35,7 +35,7 @@ export class WalletService {
     return privateKey.toString(16);
   }
 
-  public initWallet() {
+  public initWallet(): void {
     // let's not override existing private keys
     if (existsSync(this.privateKeyLocation)) {
       return;
@@ -53,7 +53,7 @@ export class WalletService {
       .sum();
   }
 
-  public findTxOutsForAmount(amount: number, myUnspentTxOuts: UnspentTxOut[]) {
+  public findTxOutsForAmount(amount: number, myUnspentTxOuts: UnspentTxOut[]): {'includedUnspentTxOuts': any[], 'leftOverAmount': number} {
     let currentAmount = 0;
     const includedUnspentTxOuts = [];
     for (const myUnspentTxOut of myUnspentTxOuts) {
@@ -67,7 +67,7 @@ export class WalletService {
     throw Error('not enough coins to send transaction');
   }
 
-  public createTxOuts(receiverAddress: string, myAddress: string, amount: number, leftOverAmount: number) {
+  public createTxOuts(receiverAddress: string, myAddress: string, amount: number, leftOverAmount: number): any[]  {
     const txOut1: TxOut = new TxOut(receiverAddress, amount);
     if (leftOverAmount === 0) {
       return [txOut1];
@@ -77,8 +77,11 @@ export class WalletService {
     }
   }
 
-  public createTransaction(receiverAddress: string, amount: number,
-    privateKey: string, unspentTxOuts: UnspentTxOut[]): Transaction {
+  public createTransaction(
+    receiverAddress: string, 
+    amount: number,
+    privateKey: string, 
+    unspentTxOuts: UnspentTxOut[]): Transaction {
 
     const myAddress: string = this.transactionService.getPublicKey(privateKey);
     const myUnspentTxOuts = unspentTxOuts.filter((uTxO: UnspentTxOut) => uTxO.address === myAddress);

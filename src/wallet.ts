@@ -36,7 +36,7 @@ export class Wallet {
     constructor() {
         this.transactionService = new TransactionService();
         this.walletService = new WalletService(this.transactionService);
-        this.httpServer = new HttpServer();
+        this.httpServer = new HttpServer(this.walletService);
         this.httpServer.initHttpServer(this.httpPort);
     }
 }

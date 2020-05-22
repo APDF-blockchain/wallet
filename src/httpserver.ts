@@ -1,5 +1,6 @@
 import express = require('express');
 import * as  bodyParser from 'body-parser';
+import { WalletService } from './services/wallet.service';
 
 /**
  * @classdesc - contains the attributes and methods for the http server required by the blockchain
@@ -14,7 +15,7 @@ export class HttpServer {
     /**
      * @description - about this block chain
      */
-    private about: string = "Blockchain Project";
+    private about: string = "Wallet for Blockchain Project";
     /**
      * @description - the ID of the Node that contains the blockchain
      */
@@ -28,7 +29,7 @@ export class HttpServer {
      * @description - initializes this http server
      * @constructor
      */
-    constructor() {
+    constructor(private walletService: WalletService) {
     }
 
     /**
@@ -96,10 +97,12 @@ export class HttpServer {
         });
 
         /**
-         * @description - add transactions to the transaction pool.
+         * @description - initialize the wallet
          */
-        app.post('/transactions/send', (req, res) => {
-            console.log(this.myHttpPort + ':POST /transactions/send');
+        app.post('/wallet/init', (req, res) => {
+            console.log(this.myHttpPort + ':POST /wallet/init');
+            this.walletService.initWallet();
+            res.status(201).send("Transaction send complete.");
             // let body: Transaction[] = req.body;
             // console.log(body);
             // for (let i = 0; i < body.length; i++) {
