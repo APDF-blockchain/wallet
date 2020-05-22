@@ -129,14 +129,27 @@ export class HttpServer {
             res.send(JSON.stringify(rVal));
         });
 
+        // /**
+        //  * @description - initialize the wallet
+        //  */
+        // app.post('/wallet/init', (req, res) => {
+        //     console.log(this.myHttpPort + ':POST /wallet/init');
+        //     this.walletService.initWallet();
+        //     res.status(201).send("Transaction successful");
+        //     //     res.status(401).send("No transactions were received.");
+        // });
+
         /**
-         * @description - initialize the wallet
+         * @description - create a wallet
          */
-        app.post('/wallet/init', (req, res) => {
-            console.log(this.myHttpPort + ':POST /wallet/init');
-            this.walletService.initWallet();
-            res.status(201).send("Transaction send complete.");
-            //     res.status(401).send("No transactions were received.");
+        app.post('/wallet/create/:password', (req, res) => {
+            console.log(this.myHttpPort + ':POST /wallet/:' + req.params.password);
+            let rVal: any = this.walletService.createWallet(req.params.password);
+            if (rVal !== null) {
+                res.status(201).send(rVal);
+            } else {
+                res.status(401).send("Create wallet failed.");
+            }
         });
 
         /**

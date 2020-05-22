@@ -69,6 +69,17 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<dl class="tsd-comment-tags">
+						<dt>classdesc</dt>
+						<dd><ul>
+								<li>This class contains the wallet services.</li>
+							</ul>
+						</dd>
+					</dl>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
@@ -91,6 +102,7 @@
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_services_wallet_service_.walletservice.html#ec" class="tsd-kind-icon">EC</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_services_wallet_service_.walletservice.html#privatekeydirectory" class="tsd-kind-icon">private<wbr>Key<wbr>Directory</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_services_wallet_service_.walletservice.html#privatekeylocation" class="tsd-kind-icon">private<wbr>Key<wbr>Location</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_services_wallet_service_.walletservice.html#transactionservice" class="tsd-kind-icon">transaction<wbr>Service</a></li>
 							</ul>
@@ -100,10 +112,11 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_services_wallet_service_.walletservice.html#createtransaction" class="tsd-kind-icon">create<wbr>Transaction</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_services_wallet_service_.walletservice.html#createtxouts" class="tsd-kind-icon">create<wbr>TxOuts</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_services_wallet_service_.walletservice.html#createwallet" class="tsd-kind-icon">create<wbr>Wallet</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_services_wallet_service_.walletservice.html#findtxoutsforamount" class="tsd-kind-icon">find<wbr>TxOuts<wbr>For<wbr>Amount</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_services_wallet_service_.walletservice.html#generateprivatekey" class="tsd-kind-icon">generate<wbr>Private<wbr>Key</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_services_wallet_service_.walletservice.html#getbalance" class="tsd-kind-icon">get<wbr>Balance</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_services_wallet_service_.walletservice.html#getprivatefromwallet" class="tsd-kind-icon">get<wbr>Private<wbr>From<wbr>Wallet</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="_services_wallet_service_.walletservice.html#getprivatekeyfromwallet" class="tsd-kind-icon">get<wbr>Private<wbr>Key<wbr>From<wbr>Wallet</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_services_wallet_service_.walletservice.html#getpublickeyfromwallet" class="tsd-kind-icon">get<wbr>Public<wbr>Key<wbr>From<wbr>Wallet</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_services_wallet_service_.walletservice.html#initwallet" class="tsd-kind-icon">init<wbr>Wallet</a></li>
 							</ul>
@@ -123,13 +136,19 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/APDF-blockchain/wallet/blob/155c25a/src/services/wallet.service.ts#L15">services/wallet.service.ts:15</a></li>
+									<li>Defined in <a href="https://github.com/APDF-blockchain/wallet/blob/995633e/src/services/wallet.service.ts#L21">services/wallet.service.ts:21</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>transactionService: <a href="_services_transaction_service_.transactionservice.html" class="tsd-signature-type">TransactionService</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+										</div>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="_services_wallet_service_.walletservice.html" class="tsd-signature-type">WalletService</a></h4>
@@ -145,7 +164,17 @@
 					<div class="tsd-signature tsd-kind-icon">EC<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> = new ec(&#x27;secp256k1&#x27;)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/APDF-blockchain/wallet/blob/155c25a/src/services/wallet.service.ts#L14">services/wallet.service.ts:14</a></li>
+							<li>Defined in <a href="https://github.com/APDF-blockchain/wallet/blob/995633e/src/services/wallet.service.ts#L19">services/wallet.service.ts:19</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="privatekeydirectory" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> private<wbr>Key<wbr>Directory</h3>
+					<div class="tsd-signature tsd-kind-icon">private<wbr>Key<wbr>Directory<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;node/wallet/&quot;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/APDF-blockchain/wallet/blob/995633e/src/services/wallet.service.ts#L21">services/wallet.service.ts:21</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -155,7 +184,7 @@
 					<div class="tsd-signature tsd-kind-icon">private<wbr>Key<wbr>Location<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;node/wallet/private_key&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/APDF-blockchain/wallet/blob/155c25a/src/services/wallet.service.ts#L15">services/wallet.service.ts:15</a></li>
+							<li>Defined in <a href="https://github.com/APDF-blockchain/wallet/blob/995633e/src/services/wallet.service.ts#L20">services/wallet.service.ts:20</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -165,9 +194,13 @@
 					<div class="tsd-signature tsd-kind-icon">transaction<wbr>Service<span class="tsd-signature-symbol">:</span> <a href="_services_transaction_service_.transactionservice.html" class="tsd-signature-type">TransactionService</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/APDF-blockchain/wallet/blob/155c25a/src/services/wallet.service.ts#L17">services/wallet.service.ts:17</a></li>
+							<li>Defined in <a href="https://github.com/APDF-blockchain/wallet/blob/995633e/src/services/wallet.service.ts#L27">services/wallet.service.ts:27</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+						</div>
+					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
@@ -182,7 +215,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/APDF-blockchain/wallet/blob/155c25a/src/services/wallet.service.ts#L87">services/wallet.service.ts:87</a></li>
+									<li>Defined in <a href="https://github.com/APDF-blockchain/wallet/blob/995633e/src/services/wallet.service.ts#L115">services/wallet.service.ts:115</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -214,7 +247,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/APDF-blockchain/wallet/blob/155c25a/src/services/wallet.service.ts#L77">services/wallet.service.ts:77</a></li>
+									<li>Defined in <a href="https://github.com/APDF-blockchain/wallet/blob/995633e/src/services/wallet.service.ts#L105">services/wallet.service.ts:105</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -237,6 +270,47 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="createwallet" class="tsd-anchor"></a>
+					<h3>create<wbr>Wallet</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">create<wbr>Wallet<span class="tsd-signature-symbol">(</span>password<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>filename<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>mnemonic<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/APDF-blockchain/wallet/blob/995633e/src/services/wallet.service.ts#L36">services/wallet.service.ts:36</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<dl class="tsd-comment-tags">
+									<dt>description</dt>
+									<dd><ul>
+											<li>create a wallet.</li>
+										</ul>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>password: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">{ </span>filename<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>mnemonic<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></h4>
+							<p>object</p>
+							<ul class="tsd-parameters">
+								<li class="tsd-parameter">
+									<h5>filename<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li class="tsd-parameter">
+									<h5>mnemonic<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="findtxoutsforamount" class="tsd-anchor"></a>
 					<h3>find<wbr>TxOuts<wbr>For<wbr>Amount</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -246,7 +320,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/APDF-blockchain/wallet/blob/155c25a/src/services/wallet.service.ts#L63">services/wallet.service.ts:63</a></li>
+									<li>Defined in <a href="https://github.com/APDF-blockchain/wallet/blob/995633e/src/services/wallet.service.ts#L91">services/wallet.service.ts:91</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -280,7 +354,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/APDF-blockchain/wallet/blob/155c25a/src/services/wallet.service.ts#L32">services/wallet.service.ts:32</a></li>
+									<li>Defined in <a href="https://github.com/APDF-blockchain/wallet/blob/995633e/src/services/wallet.service.ts#L60">services/wallet.service.ts:60</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -297,7 +371,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/APDF-blockchain/wallet/blob/155c25a/src/services/wallet.service.ts#L49">services/wallet.service.ts:49</a></li>
+									<li>Defined in <a href="https://github.com/APDF-blockchain/wallet/blob/995633e/src/services/wallet.service.ts#L77">services/wallet.service.ts:77</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -313,17 +387,17 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="getprivatefromwallet" class="tsd-anchor"></a>
-					<h3>get<wbr>Private<wbr>From<wbr>Wallet</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Private<wbr>From<wbr>Wallet<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
+					<a name="getprivatekeyfromwallet" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> get<wbr>Private<wbr>Key<wbr>From<wbr>Wallet</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Private<wbr>Key<wbr>From<wbr>Wallet<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/APDF-blockchain/wallet/blob/155c25a/src/services/wallet.service.ts#L21">services/wallet.service.ts:21</a></li>
+									<li>Defined in <a href="https://github.com/APDF-blockchain/wallet/blob/995633e/src/services/wallet.service.ts#L49">services/wallet.service.ts:49</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -340,7 +414,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/APDF-blockchain/wallet/blob/155c25a/src/services/wallet.service.ts#L26">services/wallet.service.ts:26</a></li>
+									<li>Defined in <a href="https://github.com/APDF-blockchain/wallet/blob/995633e/src/services/wallet.service.ts#L54">services/wallet.service.ts:54</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -357,7 +431,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/APDF-blockchain/wallet/blob/155c25a/src/services/wallet.service.ts#L38">services/wallet.service.ts:38</a></li>
+									<li>Defined in <a href="https://github.com/APDF-blockchain/wallet/blob/995633e/src/services/wallet.service.ts#L66">services/wallet.service.ts:66</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -415,6 +489,9 @@
 								<a href="_services_wallet_service_.walletservice.html#ec" class="tsd-kind-icon">EC</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+								<a href="_services_wallet_service_.walletservice.html#privatekeydirectory" class="tsd-kind-icon">private<wbr>Key<wbr>Directory</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
 								<a href="_services_wallet_service_.walletservice.html#privatekeylocation" class="tsd-kind-icon">private<wbr>Key<wbr>Location</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
@@ -427,6 +504,9 @@
 								<a href="_services_wallet_service_.walletservice.html#createtxouts" class="tsd-kind-icon">create<wbr>TxOuts</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_services_wallet_service_.walletservice.html#createwallet" class="tsd-kind-icon">create<wbr>Wallet</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_services_wallet_service_.walletservice.html#findtxoutsforamount" class="tsd-kind-icon">find<wbr>TxOuts<wbr>For<wbr>Amount</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
@@ -435,8 +515,8 @@
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_services_wallet_service_.walletservice.html#getbalance" class="tsd-kind-icon">get<wbr>Balance</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="_services_wallet_service_.walletservice.html#getprivatefromwallet" class="tsd-kind-icon">get<wbr>Private<wbr>From<wbr>Wallet</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
+								<a href="_services_wallet_service_.walletservice.html#getprivatekeyfromwallet" class="tsd-kind-icon">get<wbr>Private<wbr>Key<wbr>From<wbr>Wallet</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_services_wallet_service_.walletservice.html#getpublickeyfromwallet" class="tsd-kind-icon">get<wbr>Public<wbr>Key<wbr>From<wbr>Wallet</a>
@@ -464,10 +544,11 @@
 				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
 			</ul>
 			<ul class="tsd-legend">
-				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
 			</ul>
 			<ul class="tsd-legend">
-				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
 			</ul>
 		</div>
 	</div>

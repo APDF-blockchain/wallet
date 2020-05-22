@@ -1,7 +1,8 @@
 import { ec } from 'elliptic';
 //const fs = require('fs');
-import { existsSync, readFileSync, unlinkSync, writeFileSync } from 'fs';
+import { existsSync, readFileSync, unlinkSync, writeFileSync} from 'fs';
 //import * as _ from 'lodash';
+import { ethers } from 'ethers';
 
 import { TransactionService } from './transaction.service';
 import { UnspentTxOut } from '../model/unspent-tx-out';
@@ -9,13 +10,40 @@ import { TxOut } from '../model/tx-out';
 import { Transaction } from '../model/transaction';
 import { TxIn } from '../model/tx-in';
 
+/**
+ * @classdesc - This class contains the wallet services.
+ * @class WalletService
+ */
 export class WalletService {
 
   public EC = new ec('secp256k1');
   private privateKeyLocation = 'node/wallet/private_key';
+  private privateKeyDirectory = 'node/wallet/';
 
+  /**
+   * @constructor
+   * @param {TransactionService} transactionService 
+   */
   constructor(private transactionService: TransactionService) {
     console.log('WalletService created.');
+  }
+
+  /**
+   * @description - create a wallet.
+   * @param {string} password 
+   * @returns {'mnemonic': mnemonic, 'filename': filename} object
+   */
+  public createWallet(password: string): { 'mnemonic': string, 'filename': string } {
+    const randomEntropyBytes = ethers.utils.randomBytes(16);
+    const mnemonic = ethers.utils.HDNode.entropyToMnemonic(randomEntropyBytes);
+    const wallet = ethers.Wallet.fromMnemonic(mnemonic);
+    const filename = "UTC_JSON_WALLET_" + Math.round(+ new Date() / 1000) + "_" + +(Math.floor(Math.random() * 200001) - 10000) + ".json";
+
+    wallet.encrypt(password).then((jsonWallet) => {
+      writeFileSync(this.privateKeyDirectory + filename, jsonWallet, 'utf-8');
+    });
+    let rVal = {'mnemonic': mnemonic, 'filename': filename};
+    return rVal;
   }
 
   private getPrivateKeyFromWallet(): string {
@@ -53,7 +81,7 @@ export class WalletService {
     //   .sum();
     let rVal: number = 0;
     for (let i = 0; i < unspentTxOuts.length; i++) {
-      if(unspentTxOuts[i].address === address) {
+      if (unspentTxOuts[i].address === address) {
         rVal += unspentTxOuts[i].amount;
       }
     }
