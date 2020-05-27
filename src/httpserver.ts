@@ -1,6 +1,7 @@
 import express = require('express');
 import * as  bodyParser from 'body-parser';
 import { WalletService } from './services/wallet.service';
+import cors from 'cors';
 
 /**
  * @classdesc - contains the attributes and methods for the http server required by the blockchain
@@ -49,6 +50,7 @@ export class HttpServer {
         this.nodeId = (myHttpPort + Math.random()).toString();
         const app: express.Application = express();
         app.use(bodyParser.json());
+        app.use(cors());
 
         /**
          * @description - http use request

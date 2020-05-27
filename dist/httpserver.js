@@ -18,10 +18,14 @@ var __importStar = (this && this.__importStar) || function (mod) {
     __setModuleDefault(result, mod);
     return result;
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.HttpServer = void 0;
 const express = require("express");
 const bodyParser = __importStar(require("body-parser"));
+const cors_1 = __importDefault(require("cors"));
 /**
  * @classdesc - contains the attributes and methods for the http server required by the blockchain
  * @class HttpServer
@@ -54,6 +58,7 @@ class HttpServer {
         this.nodeId = (myHttpPort + Math.random()).toString();
         const app = express();
         app.use(bodyParser.json());
+        app.use(cors_1.default());
         /**
          * @description - http use request
          * @param err - contains any errors in the request
