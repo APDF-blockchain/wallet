@@ -25,7 +25,7 @@ export class WalletService {
    * @param {string} password 
    * @returns {'mnemonic': mnemonic, 'filename': filename} object
    */
-  public createWallet(password: string): { 'mnemonic': string, 'filename': string } {
+  public createWallet(password: string): { 'myAddress' : string, 'mnemonic': string, 'privateKey' : string,'filename': string } {
     const randomEntropyBytes = ethers.utils.randomBytes(16);
     const mnemonic = ethers.utils.HDNode.entropyToMnemonic(randomEntropyBytes);
     const wallet = ethers.Wallet.fromMnemonic(mnemonic);
@@ -34,7 +34,10 @@ export class WalletService {
     wallet.encrypt(password).then((jsonWallet) => {
       writeFileSync(this.walletDirectory + filename, jsonWallet, 'utf-8');
     });
-    let rVal = { 'mnemonic': mnemonic, 'filename': filename };
+
+    let address = wallet.address;
+    let privateKey = wallet.privateKey;
+    let rVal = { 'myAddress' : address, 'mnemonic': mnemonic, 'privateKey' : privateKey, 'filename': filename };
     return rVal;
   }
 
