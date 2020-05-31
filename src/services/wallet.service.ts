@@ -23,9 +23,9 @@ export class WalletService {
   /**
    * @description - create a wallet.
    * @param {string} password 
-   * @returns {'mnemonic': mnemonic, 'filename': filename} object
+   * @returns { 'address': address, 'mnemonic': mnemonic, 'privateKey': privateKey, 'publicKey': publicKey, 'filename': filename } object
    */
-  public createWallet(password: string): { 'myAddress' : string, 'mnemonic': string, 'privateKey' : string,'filename': string } {
+  public createWallet(password: string): { 'address' : string, 'mnemonic': string, 'privateKey' : string, 'publicKey' : string, 'filename': string } {
     const randomEntropyBytes = ethers.utils.randomBytes(16);
     const mnemonic = ethers.utils.HDNode.entropyToMnemonic(randomEntropyBytes);
     const wallet = ethers.Wallet.fromMnemonic(mnemonic);
@@ -37,7 +37,10 @@ export class WalletService {
 
     let address = wallet.address;
     let privateKey = wallet.privateKey;
-    let rVal = { 'myAddress' : address, 'mnemonic': mnemonic, 'privateKey' : privateKey, 'filename': filename };
+    let signingKey = new ethers.utils.SigningKey(privateKey);
+    let publicKey = signingKey.publicKey;
+    let compressedPublicKey = ethers.utils.computePublicKey(publicKey, true);
+    let rVal = { 'address' : address, 'mnemonic': mnemonic, 'privateKey' : privateKey, 'publicKey' : compressedPublicKey,'filename': filename };
     return rVal;
   }
 
