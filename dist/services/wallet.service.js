@@ -21,7 +21,7 @@ class WalletService {
     /**
      * @description - create a wallet.
      * @param {string} password
-     * @returns {'mnemonic': mnemonic, 'filename': filename} object
+     * @returns { 'address': address, 'mnemonic': mnemonic, 'privateKey': privateKey, 'publicKey': publicKey, 'filename': filename } object
      */
     createWallet(password) {
         const randomEntropyBytes = ethers_1.ethers.utils.randomBytes(16);
@@ -31,7 +31,12 @@ class WalletService {
         wallet.encrypt(password).then((jsonWallet) => {
             fs_1.writeFileSync(this.walletDirectory + filename, jsonWallet, 'utf-8');
         });
-        let rVal = { 'mnemonic': mnemonic, 'filename': filename };
+        let address = wallet.address;
+        let privateKey = wallet.privateKey;
+        let signingKey = new ethers_1.ethers.utils.SigningKey(privateKey);
+        let publicKey = signingKey.publicKey;
+        let compressedPublicKey = ethers_1.ethers.utils.computePublicKey(publicKey, true);
+        let rVal = { 'address': address, 'mnemonic': mnemonic, 'privateKey': privateKey, 'publicKey': compressedPublicKey, 'filename': filename };
         return rVal;
     }
 }
